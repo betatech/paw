@@ -14,14 +14,12 @@
             "paw\\": "src/"
         }
     },
-    "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "^2.0.15",
-        "voskobovich/yii2-linker-behavior": "^4.1",
-        "yiisoft/yii2-swiftmailer": "~2.0.0",
-        "nterms/yii2-mailqueue": "^0.0.14",
-        "yiisoft/yii2-imagine": "^2.1"
-    },
+    "repositories": [
+        {
+         "type": "composer",
+         "url": "https://asset-packagist.org"
+        }
+    ],
     "require-dev": {
         "codeception/codeception": "^2.4",
         "phpstan/phpstan": "^0.10.2",
@@ -41,5 +39,18 @@
             "@win-test",
             "@win-stan"
         ]
+    },
+    "require": {
+        "php": ">=5.4.0",
+        "yiisoft/yii2": "^2.0.15",
+        "voskobovich/yii2-linker-behavior": "^4.1",
+        "yiisoft/yii2-swiftmailer": "~2.0.0",
+        "nterms/yii2-mailqueue": "^0.0.14",
+        "yiisoft/yii2-imagine": "^2.1"
+    },
+    "config": {
+        "allow-plugins": {
+            "yiisoft/yii2-composer": true
+        }
     }
 }
